@@ -1,0 +1,26 @@
+{% extends 'leads/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Lead</title>
+</head>
+<body>
+
+<h2>Add New Lead</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="mb-2">Save Lead</button>
+</form>
+
+<a href="/leads/">
+    <button class="mb-4"> Back to Leads </button>
+    </a>
+
+</body>
+</html>
+
+{% endblock %}

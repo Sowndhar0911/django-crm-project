@@ -1,0 +1,52 @@
+{% extends 'leads/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        .card {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .blue { background: #007bff; }
+        .green { background: #28a745; }
+        .orange { background: #fd7e14; }
+        .red { background: #dc3545; }
+    </style>
+</head>
+<body>
+
+<h2>CRM Dashboard</h2>
+
+<div class="card blue">
+    Total Leads<br>
+    <b>{{ total_leads }}</b>
+</div>
+
+<div class="card orange">
+    New Leads<br>
+    <b>{{ new_leads }}</b>
+</div>
+
+<div class="card green">
+    Closed Won<br>
+    <b>{{ closed_won }}</b>
+</div>
+
+<div class="card red">
+    Closed Lost<br>
+    <b>{{ closed_lost }}</b>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Lead</title>
+</head>
+<body>
+    <h2>Are you sure you want to delete?</h2>
+
+    <p><strong>{{ lead.name }}</strong> - {{ lead.phone }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+        <a href="{% url 'lead_list' %}">Cancel</a>
+    </form>
+</body>
+</html>
