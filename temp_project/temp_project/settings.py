@@ -1,3 +1,5 @@
+from django import os
+
 """
 Django settings for temp_project project.
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-%7#rv*kid_8-3k&ur%zzm568aij_)stw3r47a*480y1&=52s*5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,4 +125,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
